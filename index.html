@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/main.js">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <title>PAS-POL</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var setImg = '#photo';
+      var fadeSpeed = 1600;
+      var switchDelay = 5000;
+
+      $(setImg).children('img').css({ opacity: '0' });
+      $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
+      setInterval(function () {
+        $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
+      }, switchDelay);
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#acMenu dt").on("click", function () {
+        $(this).next().slideToggle();
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      var backToTop = $('.backToTop');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          backToTop.fadeIn();
+        } else {
+          backToTop.fadeOut();
+        }
+      });
+      backToTop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#menu").css("display", "none");
+      $("#menu-bt").on("click", function () {
+        $("#menu").slideToggle(300);
+        $(this).toggleClass("active");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div id="menu-bt" class="menubar">
+        <p class="menubar__item">MENU</p>
+        <p class="menubar__item"><i class="fas fa-bars"></i></p>
+      </div>
+      <nav id="menu" class="header__nav iphone">
+        <ul>
+          <li class="header__nav-list"><a href="#">TOP</a></li>
+          <li class="header__nav-list"><a href="#">PRODUCT</a></li>
+          <li class="header__nav-list"><a href="#">ABOUT</a></li>
+          <li class="header__nav-list"><a href="#">NEWS</a></li>
+          <li class="header__nav-list"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <nav class="header__nav pc">
+        <ul>
+          <li class="header__nav-list"><a href="#">TOP</a></li>
+          <li class="header__nav-list"><a href="#">PRODUCT</a></li>
+          <li class="header__nav-list"><a href="#">ABOUT</a></li>
+          <li class="header__nav-list"><a href="#">NEWS</a></li>
+          <li class="header__nav-list"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header__top">
+        <div id="photo">
+          <img src="img/main_visual_111-0x0.jpg" alt="">
+          <img src="img/main_visual_13-0x0.jpg" alt="">
+          <img src="img/main_visual_2-0x0.jpg" alt="">
+          <img src="img/main_visual_6-0x0.jpg" alt="">
+          <img src="img/main_visual_7-0x0.jpg" alt="">
+        </div>
+        <img class="header__top-logo" src="/img/siteLogo-small@2x.png">
+      </div>
+      <div class="header__bottom container">
+        <p class="header__bottom-title">旅に出よう。</p>
+        <p>僕たちが作りたいのは<br>
+          持っているだけで旅に出たくなるモノ。<br>
+          持っているだけでわくわくするモノ。<br>
+        </p>
+        <p>
+          それは新しい時代の “パスポート”<br>
+          僕たちが作るものは、<br>
+          そんな、存在でありたい。<br>
+        </p>
+        <p>
+          そして、人と人が繋がる<br>
+          こんな時代だからこそ、<br>
+          僕たちは、みんなでひとつのモノを<br>
+          作ることを追求したい。<br>
+        </p>
+        <p class="header__bottom-logo">「 <span data-ruby="パスポル">PAS-POL</span> 」</p>
+        <p>それは、自分と世界を繋げる<br>
+          旅のモノづくりブランド
+        </p>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <h1 class="mainTitle">PRODUCT</h1>
+      <div class="main__product">
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/fes001t.png" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/212465b615e458e672a9e0a1cbb1acf1.jpeg" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/365日本カレンダー_サムネイル1.png" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/banner_サムネイル21.png" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/passportnotebook-thumb11.png" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+        <div class="main__product--article">
+          <a href="#">
+            <img src="/img/englishbook-thumb11.png" alt="">
+            <p class="main__product--article-text">The World Festival Guide -海外の音楽フェス完全ガイド-</p>
+          </a>
+        </div>
+
+      </div>
+      <a class="More-btn" href="#">MORE<span class="More-btn__icon"><i class="fas fa-chevron-right"></i></span></a>
+    </div>
+    <div class="background-gray container">
+      <h1 class="mainTitle">NEWS</h1>
+      <div class="main__news">
+        <div class="main__news--article">
+          <a href="#">
+            <div class="article-parent">
+              <img class="article-item" src="/img/アンケートアイキャッチ.jpg" alt="">
+              <div class="article-item">
+                <p class="main__news--article-text">【かなりお得！】新しい一年にぴったり。毎日を彩るお得な福袋発売スタート！</p>
+                <p class="main__news--article-date">2019.12.11</p>
+                <p class="main__news--article-longtext">
+                  noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
+                  約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
+                  #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
+                  ...</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="main__news--article">
+          <a href="#">
+            <div class="article-parent">
+              <img class="article-item" src="/img/僕が旅人になった日_new.jpg" alt="">
+              <div class="article-item">
+                <p class="main__news--article-text">【かなりお得！】新しい一年にぴったり。毎日を彩るお得な福袋発売スタート！</p>
+                <p class="main__news--article-date">2019.12.11</p>
+                <p class="main__news--article-longtext">
+                  noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
+                  約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
+                  #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
+                  ...</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="main__news--article">
+          <a href="#">
+            <div class="article-parent">
+              <img class="article-item" src="/img/pickup3_アートボード-1.jpg" alt="">
+              <div class="article-item">
+                <p class="main__news--article-text">【かなりお得！】新しい一年にぴったり。毎日を彩るお得な福袋発売スタート！</p>
+                <p class="main__news--article-date">2019.12.11</p>
+                <p class="main__news--article-longtext">
+                  noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
+                  約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
+                  #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
+                  ...</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="main__news--article">
+          <a href="#">
+            <div class="article-parent">
+              <img class="article-item" src="/img/th_福袋2020_アートボード-1.jpg" alt="">
+              <div class="article-item">
+                <p class="main__news--article-text">【かなりお得！】新しい一年にぴったり。毎日を彩るお得な福袋発売スタート！</p>
+                <p class="main__news--article-date">2019.12.11</p>
+                <p class="main__news--article-longtext">
+                  noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
+                  約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
+                  #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
+                  ...</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a class="More-btn" href="#">MORE<span class="More-btn__icon"><i class="fas fa-chevron-right"></i></span></a>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <a class="backToTop" href="#wrap"><i class="fas fa-chevron-up"></i></a>
+    <div class="footer__follow">
+      <a class="footer__follow-btn Facebook" href="#">Share on Facebook</a>
+      <a class="footer__follow-btn Twitter" href="#">Share on Twitter</a>
+      <a class="footer__follow-btn Bookmark" href="#">Hatena Bookmark</a>
+      <a class="footer__follow-btn Line" href="#">Send to LINE</a>
+    </div>
+    <nav class="footer__nav">
+      <ul>
+        <li><a class="footer__nav-list" href="#">TOP</a></li>
+        <li><a class="footer__nav-list" href="#">PRODUCT</a></li>
+        <li><a class="footer__nav-list" href="#">ABOUT</a></li>
+        <li><a class="footer__nav-list" href="#">NEWS</a></li>
+        <li><a class="footer__nav-list" href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="footer__end container">
+      <img class="footer__end--logo" src="/img/siteLogo-small@2x.png" alt="PAS-POL">
+      <p class="footer__end--text">Copyright © 2019 PAS-POL -旅のモノづくりブランド-｜
+        TABIPPO All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
