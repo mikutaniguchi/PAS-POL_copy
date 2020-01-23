@@ -6,18 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="js/main.js">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script rel="stylesheet" href="js/main.js"></script>
   <title>PAS-POL</title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
   <script type="text/javascript">
     $(function () {
       var setImg = '#photo';
@@ -30,15 +26,13 @@
         $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
       }, switchDelay);
     });
-  </script>
-  <script>
+
     $(function () {
       $("#acMenu dt").on("click", function () {
         $(this).next().slideToggle();
       });
     });
-  </script>
-  <script>
+
     $(document).ready(function () {
       var backToTop = $('.backToTop');
       $(window).scroll(function () {
@@ -53,9 +47,7 @@
         return false;
       });
     });
-  </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script>
+    // menu goggle
     $(function () {
       $("#menu").css("display", "none");
       $("#menu-bt").on("click", function () {
@@ -83,13 +75,16 @@
         </ul>
       </nav>
       <nav class="header__nav pc">
-        <ul>
-          <li class="header__nav-list"><a href="#">TOP</a></li>
-          <li class="header__nav-list"><a href="#">PRODUCT</a></li>
-          <li class="header__nav-list"><a href="#">ABOUT</a></li>
-          <li class="header__nav-list"><a href="#">NEWS</a></li>
-          <li class="header__nav-list"><a href="#">CONTACT</a></li>
-        </ul>
+        <div class="header__nav-item"><a href="#"><img class="header__nav-logo" src="img/siteLogo-pc@2x.png" alt=""></a></div>
+        <div class="header__nav-item">
+          <ul>
+            <li class="header__nav-list"><a href="#">TOP</a></li>
+            <li class="header__nav-list"><a href="#">PRODUCT</a></li>
+            <li class="header__nav-list"><a href="#">ABOUT</a></li>
+            <li class="header__nav-list"><a href="#">NEWS</a></li>
+            <li class="header__nav-list"><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="header__top">
         <div id="photo">
@@ -183,7 +178,8 @@
                   noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
                   約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
                   #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
-                  ...</p>
+                  ...
+                </p>
               </div>
             </div>
           </a>
@@ -199,7 +195,8 @@
                   noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
                   約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
                   #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
-                  ...</p>
+                  ...
+                </p>
               </div>
             </div>
           </a>
@@ -215,7 +212,8 @@
                   noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
                   約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
                   #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
-                  ...</p>
+                  ...
+                </p>
               </div>
             </div>
           </a>
@@ -231,7 +229,8 @@
                   noteとコラボして制作をしている旅のエッセイ本。「#旅とわたし」のハッシュタグをつけて投稿していただいてるのですが、なんと2000投稿を突破しました！！！
                   約１週間で1000投稿も増えていて、感激です！そして全て読ませていただいてます！！
                   #旅とわたしのテーマがあるから、旅について書いてみようと振り返って文章にしてくれる人たちもたくさんいました。自分の旅を改てどうだったなかなと考え直すことはあまりないと思います。旅中の出来事を思い出して嬉しくなったり、あの時どう思ってたなぁと自分のことを知れた
-                  ...</p>
+                  ...
+                </p>
               </div>
             </div>
           </a>

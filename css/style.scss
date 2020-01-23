@@ -60,7 +60,7 @@ img{
     padding: 50px 100px;
   };
   @include pc {
-    padding: 50px 22%;
+    padding: 50px 18%;
   };
 }
 @mixin text-h2{
@@ -95,8 +95,10 @@ img{
 }
 .More-btn{
   @include btn($color-normal);
+  position: relative;
   .More-btn__icon{
-    padding-left:40px;
+    position: absolute;
+    padding-left: 40px;
   }
 }
 .Facebook{
@@ -162,8 +164,6 @@ img{
   @include tab {
     display: inline;
   };
-
-
 }
 .header{
   position: relative;
@@ -176,9 +176,10 @@ img{
   z-index: 100;
   @include tab {
     background-color: rgba(0,0,0,0);
-    top:70px;
-    right: 50px;
-    text-align: right;
+    display:flex;
+    justify-content: space-between;
+    margin-top:40px;
+    line-height: 55px;
   };
   .header__nav-brand{
     padding:15px 30px;
@@ -191,6 +192,13 @@ img{
       color: $color-normal;
     }
   }
+  .header__nav-logo{
+  @include tab {
+    width:40%;
+    padding-left:40px;
+
+    };
+}
   .header__nav-list{
     padding:17px 30px;
     font-size: 14px;
@@ -217,19 +225,20 @@ img{
     bottom: 0;
     margin: auto;
     @include tab {
-      width: 10%;
+      display:none;
     };
   }
 }
 
+
 .header__bottom{
+  max-width: 300px;
   @include tab {
-    padding-left:35%;
-  };
-  @include pc {
-    padding-left:42%;
+    text-align: center;
+    margin: 0 auto;
   };
   p{
+    text-align: left;
     padding-bottom:20px;
   }
   &-logo{
@@ -274,6 +283,11 @@ img{
     line-height: 1.4;
     font-weight: normal;
     font-size:15px;
+    max-width: 300px;
+    @include tab {
+    text-align: center;
+    margin: 0 auto;
+  };
 
     &-title{
       padding-bottom:30px;
