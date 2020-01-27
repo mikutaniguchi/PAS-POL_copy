@@ -12,7 +12,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <title>PAS-POL</title>
-
   <script type="text/javascript">
     // メインビジュアルの画像切り替え
     $(function () {
@@ -26,6 +25,7 @@
         $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
       }, switchDelay);
     });
+
     // スムーススクロール
     $(document).ready(function () {
       var backToTop = $('.backToTop');
@@ -41,6 +41,7 @@
         return false;
       });
     });
+
     // ハンバーガーメニュードロップダウン
     $(function () {
       $("#menu").css("display", "none");
@@ -70,15 +71,18 @@
       </nav>
       <nav class="header__nav pc">
         <div class="header__nav-item"><a href="#"><img class="header__nav-logo" src="img/siteLogo-pc@2x.png" alt=""></a></div>
-        <div class="header__nav-item header__nav-item__space">
-          <ul>
-            <li class="header__nav-list"><a href="#">TOP</a></li>
-            <li class="header__nav-list"><a href="#">PRODUCT</a></li>
-            <li class="header__nav-list"><a href="#">ABOUT</a></li>
-            <li class="header__nav-list"><a href="#">NEWS</a></li>
-            <li class="header__nav-list"><a href="#">CONTACT</a></li>
-          </ul>
-        </div>
+        <<<<<<< HEAD <div class="header__nav-item header__nav-item__space">
+          =======
+          <div class="header__nav-item">
+            >>>>>>> origin/master
+            <ul>
+              <li class="header__nav-list"><a href="#">TOP</a></li>
+              <li class="header__nav-list"><a href="#">PRODUCT</a></li>
+              <li class="header__nav-list"><a href="#">ABOUT</a></li>
+              <li class="header__nav-list"><a href="#">NEWS</a></li>
+              <li class="header__nav-list"><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
       </nav>
       <div class="header__top">
         <div id="photo">
