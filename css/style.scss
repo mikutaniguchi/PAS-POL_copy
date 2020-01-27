@@ -10,7 +10,7 @@ $color-line:#8EC09D;
 $color-footerMenu:#939798;
 $color-footerEnd:#656B6E;
 // media
-$tab: 680px; // タブレット
+$tab: 768px; // タブレット
 $pc: 1024px; // PC
 @mixin tab {
   @media (min-width: ($tab)) {
@@ -194,10 +194,14 @@ img{
   }
   .header__nav-logo{
   @include tab {
-    width:40%;
+    width:200px;
     padding-left:40px;
 
     };
+}
+.header__nav-item__space{
+  padding-right: 100px;
+
 }
   .header__nav-list{
     padding:17px 30px;
@@ -206,11 +210,13 @@ img{
     z-index: 1;
     a{
       color:#ffffff;
+
     }
   @include tab {
     display: inline;
     border-top: none;
     padding:0 1em;
+    &:nth-child(5){padding-right: 0.5rem; }
   };
 }
 }

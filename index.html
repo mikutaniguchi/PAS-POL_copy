@@ -11,10 +11,10 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script rel="stylesheet" href="js/main.js"></script>
   <title>PAS-POL</title>
 
   <script type="text/javascript">
+    // メインビジュアルの画像切り替え
     $(function () {
       var setImg = '#photo';
       var fadeSpeed = 1600;
@@ -26,13 +26,7 @@
         $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
       }, switchDelay);
     });
-
-    $(function () {
-      $("#acMenu dt").on("click", function () {
-        $(this).next().slideToggle();
-      });
-    });
-
+    // スムーススクロール
     $(document).ready(function () {
       var backToTop = $('.backToTop');
       $(window).scroll(function () {
@@ -47,7 +41,7 @@
         return false;
       });
     });
-    // menu goggle
+    // ハンバーガーメニュードロップダウン
     $(function () {
       $("#menu").css("display", "none");
       $("#menu-bt").on("click", function () {
@@ -76,7 +70,7 @@
       </nav>
       <nav class="header__nav pc">
         <div class="header__nav-item"><a href="#"><img class="header__nav-logo" src="img/siteLogo-pc@2x.png" alt=""></a></div>
-        <div class="header__nav-item">
+        <div class="header__nav-item header__nav-item__space">
           <ul>
             <li class="header__nav-list"><a href="#">TOP</a></li>
             <li class="header__nav-list"><a href="#">PRODUCT</a></li>
