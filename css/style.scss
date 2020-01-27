@@ -213,9 +213,7 @@ img{
   @include tab {
     display: inline;
     border-top: none;
-    padding:0 1em;
-    &:nth-child(5){padding-right: 0.5rem; }
-  };
+    padding:0 1em; }
 }
 }
 .header__top{

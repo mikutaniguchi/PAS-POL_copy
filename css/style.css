@@ -286,9 +286,6 @@ img {
     border-top: none;
     padding: 0 1em;
   }
-  .header .header__nav .header__nav-list:nth-child(5) {
-    padding-right: 0.5rem;
-  }
 }
 
 .header .header__top {
