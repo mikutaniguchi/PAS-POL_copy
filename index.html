@@ -8,49 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>PAS-POL</title>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <title>PAS-POL</title>
-  <script type="text/javascript">
-    // メインビジュアルの画像切り替え
-    $(function () {
-      var setImg = '#photo';
-      var fadeSpeed = 1600;
-      var switchDelay = 5000;
 
-      $(setImg).children('img').css({ opacity: '0' });
-      $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
-      setInterval(function () {
-        $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
-      }, switchDelay);
-    });
-
-    // スムーススクロール
-    $(document).ready(function () {
-      var backToTop = $('.backToTop');
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          backToTop.fadeIn();
-        } else {
-          backToTop.fadeOut();
-        }
-      });
-      backToTop.click(function () {
-        $('body, html').animate({ scrollTop: 0 }, 500);
-        return false;
-      });
-    });
-
-    // ハンバーガーメニュードロップダウン
-    $(function () {
-      $("#menu").css("display", "none");
-      $("#menu-bt").on("click", function () {
-        $("#menu").slideToggle(300);
-        $(this).toggleClass("active");
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -258,6 +220,7 @@
         TABIPPO All rights reserved.</p>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
